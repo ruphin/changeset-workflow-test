@@ -1,8 +1,7 @@
 import { sum } from "test-changeset-sum";
-import { answer } from "test-changeset-answer";
 
-console.log(`${sum} === ${answer + answer}`);
+console.log(`${sum} === 88`);
 
-if (sum !== answer + answer + 1) {
+if (sum !== 88) {
   throw "fail";
 }
