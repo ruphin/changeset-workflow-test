@@ -1,0 +1,10 @@
+{
+  "name": "test-changeset-answer",
+  "version": "0.0.1",
+  "description": "Test package",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "files": [
+    "index.mjs"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "test-changeset-sum",
+  "version": "0.0.1",
+  "description": "Test package",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "files": [
+    "index.mjs"
+  ],
+  "dependencies": {
+    "test-changeset-answer": "^0.0.1"
+  }
+}

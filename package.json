@@ -1,0 +1,17 @@
+{
+  "name": "changeset-workflow-test",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/answer",
+    "packages/sum"
+  ],
+  "scripts": {
+    "test": "node --experimental-modules test.mjs",
+    "changeset": "changeset",
+    "release": "git checkout main && git pull && git checkout -b release && git pull && git rebase main && changeset version && git add . && git commit -m 'Release' && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.8.0"
+  }
+}
