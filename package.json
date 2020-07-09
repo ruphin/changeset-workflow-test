@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node --experimental-modules test.mjs",
     "changeset": "changeset",
-    "release": "git checkout main && git pull && git checkout release && git pull && git rebase main && changeset version && git add . && git commit -m 'Release' && changeset publish && git push --follow-tags"
+    "release": "git checkout main && git pull && yarn test && git checkout release && git pull && git rebase main && changeset version && git add . && git commit -m 'Release' && changeset publish && git push --follow-tags"
   },
   "devDependencies": {
     "@changesets/cli": "^2.8.0"
