@@ -8,15 +8,21 @@
 
 ## Approving changes
 
-1. Verify that the merge request includes a changeset if it needs to be released
+1. Verify that the merge request includes a changeset if it a release
 2. Verify that the tests are passing
 3. Merge into `main`
 
 ## Releasing
 
-1. Merge `main` into `release`
-2. On `release`, run `yarn changeset version`
-3. Commit the changes
-4. Run `yarn changeset publish`
-5. Merge `release` into `main`
-6. Push git tags
+1. Run `yarn release` [details](#release-script)
+2. In gitlab, merge the `release` branch onto `main`
+
+### Release script
+
+1. Checkout the `main` branch and pull in all remote changes
+2. Verify that the tests pass
+3. Checkout the `release` branch and rebase it onto `main`
+4. Run `changeset version` to update the package versions and changelogs
+5. Make a release commit with these changes
+6. Run `changeset publish` to publish the changes and add git tags to the release commit
+7. Push the `release` branch
